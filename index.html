@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Костянтин Грабовський | STEM, IT та Фізика</title>
+    <style>
+        :root {
+            --bg-color: #1a1a1a;
+            --text-color: #f5f5f5;
+            --accent-orange: #ff7b00;
+            --accent-yellow: #ffcc00;
+            --dark-gray: #333333;
+            --light-gray: #cccccc;
+            --white: #ffffff;
+            --accent-blue: #007bff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Геометричний фон для шапки */
+        header {
+            background: linear-gradient(135deg, var(--bg-color) 25%, var(--dark-gray) 25%, var(--dark-gray) 50%, var(--bg-color) 50%, var(--bg-color) 75%, var(--dark-gray) 75%, var(--dark-gray) 100%);
+            background-size: 40px 40px;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-orange);
+        }
+
+        .header-content {
+            background-color: rgba(26, 26, 26, 0.9);
+            display: inline-block;
+            padding: 40px;
+            border: 2px solid var(--accent-yellow);
+            border-radius: 8px;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--white);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--accent-orange);
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--light-gray);
+        }
+
+        nav {
+            background-color: var(--dark-gray);
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--accent-blue);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-orange);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--white);
+            border-left: 8px solid var(--accent-orange);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background-color: var(--dark-gray);
+            padding: 30px;
+            border-top: 5px solid var(--accent-yellow);
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            color: var(--accent-yellow);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        /* Секція Вулик */
+        .vulic-section {
+            background-color: var(--dark-gray);
+            padding: 50px;
+            border: 2px solid var(--accent-blue);
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .vulic-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background-color: var(--accent-orange);
+            transform: rotate(45deg);
+            z-index: 0;
+        }
+
+        .vulic-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-orange);
+            color: var(--white);
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-yellow);
+            color: var(--bg-color);
+        }
+
+        footer {
+            background-color: var(--dark-gray);
+            text-align: center;
+            padding: 30px;
+            border-top: 5px solid var(--accent-orange);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#about">Про мене</a>
+        <a href="#vulic">DIY Вулик</a>
+        <a href="#materials">Навчальні Матеріали</a>
+        <a href="#contact">Контакти</a>
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <h1>Костянтин Грабовський</h1>
+            <h2>Викладач Фізики, IT, STEM та Природничих наук</h2>
+            <p>Досліджуємо світ від квантів до складних інженерних 3D-моделей. Сучасні інструменти, глибокий аналіз та жодної нудьги.</p>
+            <a href="#materials" class="btn">Перейти до матеріалів</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2 class="section-title">Про викладача</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Досвід та підхід</h3>
+                    <p>Працюю у Криворізькому ліцеї № 129. Мій підхід базується на тому, щоб давати не лише сухі факти, а й розуміння фізичного змісту, історії відкриттів та реального застосування у науці, техніці, мистецтві та побуті.</p>
+                    <p>Маю бекграунд у технічному менеджменті, Help Desk та дизайні, що дозволяє мені інтегрувати найсучасніші цифрові інструменти в освітній процес.</p>
+                </div>
+                <div class="card">
+                    <h3>Цінності на уроках</h3>
+                    <ul>
+                        <li style="margin-bottom: 10px; margin-left: 20px;">Аналітичне мислення та вирішення нестандартних задач.</li>
+                        <li style="margin-bottom: 10px; margin-left: 20px;">Практична користь: ми вчимо те, що працює в реальному житті.</li>
+                        <li style="margin-bottom: 10px; margin-left: 20px;">Креативність у підходах до STEM.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="vulic" class="vulic-section">
+            <div class="vulic-content">
+                <h2 style="font-size: 2.5rem; color: var(--white); margin-bottom: 20px;">Освітній простір "DIY Вулик"</h2>
+                <p style="font-size: 1.2rem; max-width: 800px;">Місце, де теорія перетворюється на практику. У нашому просторі учні власноруч створюють проєкти, вивчають закони фізики на реальних механізмах та опановують основи інженерії. Іноді доводиться працювати з тим обладнанням, яке вдалося знайти чи принести самостійно, але це лише прокачує нашу винахідливість!</p>
+                <p style="font-size: 1.2rem; max-width: 800px; margin-top: 15px;">Ми завжди відкриті до співпраці, нових ідей та технічної підтримки нашого простору.</p>
+                <a href="#contact" class="btn" style="background-color: var(--accent-blue);">Підтримати проєкт</a>
+            </div>
+        </section>
+
+        <section id="materials">
+            <h2 class="section-title">Навчальні Матеріали</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Фізика</h3>
+                    <p>Означення, формули, глибокий фізичний зміст та цікаві факти. Розглядаємо явища так, щоб вони захоплювали та розвивали уяву.</p>
+                    <a href="#" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">Відкрити конспекти</a>
+                </div>
+                <div class="card">
+                    <h3>IT та 3D-моделювання</h3>
+                    <p>Основи роботи з цифровим середовищем, створення просторових моделей (від архітектури до механізмів) та розуміння сучасних технологій.</p>
+                    <a href="#" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">Відкрити туторіали</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <h2>Зв'язатися зі мною</h2>
+        <p>Готовий до обговорення освітніх ініціатив, STEM-проєктів та розвитку "DIY Вулик".</p>
+        <p style="margin-top: 15px; font-weight: bold; color: var(--accent-yellow);">Email: teacher.hrabovskyi@example.com</p>
+        <p style="margin-top: 20px; color: var(--dark-gray); font-size: 0.9rem; color: var(--light-gray);">&copy; 2026 Костянтин Грабовський. Всі права захищено.</p>
+    </footer>
+
+</body>
+</html>
